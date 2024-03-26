@@ -34,7 +34,7 @@ async function randomHandler(req: any, res: any) {
   if (connection == null) return;
 
   let [result] = await connection.query(
-    "SELECT * FROM `words` WHERE `yomi_word_same`='0' Order by rand() Limit 1"
+    "SELECT * FROM `test` Order by rand() Limit 1"
   );
   res.send(result);
 }
