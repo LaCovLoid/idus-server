@@ -38,3 +38,8 @@ async function randomHandler(req: any, res: any) {
   );
   res.send(result);
 }
+
+app.get("/test", testHandler);
+async function testHandler(req: any, res: any) {
+  res.send({ aaa: "aaaa", bbb: "bb" });
+}
